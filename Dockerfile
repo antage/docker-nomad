@@ -16,3 +16,7 @@ RUN \
 	&& mv nomad /usr/local/bin/nomad \
 	&& chmod 00755 /usr/local/bin/nomad \
 	&& rm nomad.zip
+
+USER nobody:nogroup
+WORKDIR /
+ENTRYPOINT ["/bin/bash"]
