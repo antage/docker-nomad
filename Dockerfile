@@ -11,6 +11,7 @@ RUN \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& rm /var/log/dpkg.log \
 	&& cd /tmp \
+	&& ln -sfn /bin/bash /bin/sh \
 	&& curl -#L https://releases.hashicorp.com/nomad/0.9.3/nomad_0.9.3_linux_amd64.zip -o nomad.zip \
 	&& test "$(sha256sum nomad.zip | cut -f1 -d\ )" = 'cbd008dd2f3c622cb931ce8e7e6465f5b683e66845eb70adb776c970a8029578' \
 	&& unzip nomad.zip \
