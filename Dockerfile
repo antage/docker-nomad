@@ -20,4 +20,5 @@ RUN \
 
 USER nobody:nogroup
 WORKDIR /
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/bin/bash", "-c"]
+CMD ["/bin/bash"]
