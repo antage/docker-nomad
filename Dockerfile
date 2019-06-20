@@ -6,6 +6,7 @@ RUN \
 			curl \
 			ca-certificates \
 			unzip \
+			gettext-base \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& rm /var/log/dpkg.log \
