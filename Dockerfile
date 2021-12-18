@@ -21,7 +21,7 @@ RUN \
 	&& curl -#L https://releases.hashicorp.com/levant/0.3.0/levant_0.3.0_linux_amd64.zip -o levant.zip \
 	&& test "$(sha256sum levant.zip | cut -f1 -d\ )" = '082bd747cf49bc317035a4caab8742924eac67605a82b1b5f4640d896999ea98' \
 	&& unzip levant.zip \
-	&& mv levant /usr/local/bin/nomad \
+	&& mv levant /usr/local/bin/levant \
 	&& rm levant.zip
 
 USER nobody:nogroup
