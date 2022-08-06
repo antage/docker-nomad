@@ -12,14 +12,14 @@ RUN \
 	&& rm /var/log/dpkg.log \
 	&& cd /tmp \
 	&& ln -sfn /bin/bash /bin/sh \
-	&& curl -#L https://releases.hashicorp.com/nomad/1.2.3/nomad_1.2.3_linux_amd64.zip -o nomad.zip \
-	&& test "$(sha256sum nomad.zip | cut -f1 -d\ )" = '9e5c6354345c88f0ce3c9ceb6a61471903596febc933245a0fbe1afc89c21d31' \
+	&& curl -#L https://releases.hashicorp.com/nomad/1.3.3/nomad_1.3.3_linux_amd64.zip -o nomad.zip \
+	&& test "$(sha256sum nomad.zip | cut -f1 -d\ )" = 'd908811cebe2a8373e93c4ad3d09af5c706241878ff3f21ee0f182b4ecb571f2' \
 	&& unzip nomad.zip \
 	&& mv nomad /usr/local/bin/nomad \
 	&& chmod 00755 /usr/local/bin/nomad \
 	&& rm nomad.zip \
-	&& curl -#L https://releases.hashicorp.com/levant/0.3.0/levant_0.3.0_linux_amd64.zip -o levant.zip \
-	&& test "$(sha256sum levant.zip | cut -f1 -d\ )" = '082bd747cf49bc317035a4caab8742924eac67605a82b1b5f4640d896999ea98' \
+	&& curl -#L https://releases.hashicorp.com/levant/0.3.1/levant_0.3.1_linux_amd64.zip -o levant.zip \
+	&& test "$(sha256sum levant.zip | cut -f1 -d\ )" = '01b4a15a1eb5d6c69178ff383a457a6251658224dd9537fe1ea9f24e07044f76' \
 	&& unzip levant.zip \
 	&& mv levant /usr/local/bin/levant \
 	&& rm levant.zip
